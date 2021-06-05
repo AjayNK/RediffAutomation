@@ -50,7 +50,7 @@ public class Dataprovider_loaddata {
 	public static Iterator<Object[]> commondp_logic(String Sheetname,String sname) throws Exception
 	{
 		//constructor invoked
-		ExcelRW xl= new ExcelRW("D:\\Hybrid_Framework\\March_Framework_d\\TestData\\TestData.xlsx");
+		ExcelRW xl= new ExcelRW("C:\\Users\\admin\\git\\RediffAutomation\\src\\test\\resources\\TestData.xlsx");
 		//get Row count
 		int RowCount = xl.getRow(Sheetname);
 		//get col count

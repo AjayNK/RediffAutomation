@@ -40,7 +40,7 @@ public class Base_Class {
 		}
 		else if(btype.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","E:\\browserdriver\\chromedriver.exe");
 			 driver= new ChromeDriver();			
 		}
 		else if(btype.equals("ie"))
@@ -68,9 +68,9 @@ public class Base_Class {
 		
 		TakesScreenshot screenshot=(TakesScreenshot) driver;
 		File screenshotAs = screenshot.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotAs, new File("D:\\Hybrid_Framework\\March_Framework_d\\Screenshot\\"+TC_ID+"-"+Order_Set+"-"+str));
+		FileUtils.copyFile(screenshotAs, new File("C:\\Users\\admin\\git\\RediffAutomation\\Screenshot\\"+TC_ID+"-"+Order_Set+"-"+str));
 		
-		String path="D:\\Hybrid_Framework\\March_Framework_d\\Screenshot\\"+TC_ID+"-"+Order_Set+"-"+str;
+		String path="C:\\Users\\admin\\git\\RediffAutomation\\Screenshot\\"+TC_ID+"-"+Order_Set+"-"+str;
 		return path;
 		
 	}
@@ -82,7 +82,7 @@ public class Base_Class {
 		SimpleDateFormat df= new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
 		String str2=df.format(date);
 		
-		extentreport= new ExtentReports("D:\\Hybrid_Framework\\March_Framework_d\\Report\\"+"booksrediff"+str2+".html",false);
+		extentreport= new ExtentReports("C:\\Users\\admin\\git\\RediffAutomation\\Report\\"+"booksrediff"+str2+".html",false);
 		
 	}
 	
