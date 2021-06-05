@@ -41,7 +41,7 @@ public class Base_Class {
 		else if(btype.equals("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver","E:\\browserdriver\\chromedriver.exe");
-			 driver= new ChromeDriver();			
+			 driver= new ChromeDriver();
 		}
 		else if(btype.equals("ie"))
 		{
@@ -51,6 +51,7 @@ public class Base_Class {
 		
 		//driver= new FirefoxDriver();
 		driver.get(c1.Reading_Properties("URL"));
+		System.out.println("Website Opened Successfully. URL Entered: "+c1.Reading_Properties("URL"));
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
