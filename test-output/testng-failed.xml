@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Default suite]">
-  <test parallel="none" name="Default test(failed)">
+<suite name="Failed suite [Marchbatch]">
+  <test name="RegSet1(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
+      <class name="Scenario_Component.Scenario_Search">
+        <methods>
+          <include name="Report_extent"/>
+        </methods>
+      </class> <!-- Scenario_Component.Scenario_Search -->
       <class name="Scenario_Component.Scenario_Login">
         <methods>
           <include name="testInvalidlogin" invocation-numbers="0"/>
-          <include name="Report_extent"/>
           <include name="tearDown"/>
           <include name="Launchapp"/>
         </methods>
       </class> <!-- Scenario_Component.Scenario_Login -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- RegSet1(failed) -->
+</suite> <!-- Failed suite [Marchbatch] -->

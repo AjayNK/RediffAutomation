@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-05T07:31:14Z" name="Default suite" finished-at="2021-06-05T07:31:26Z" duration-ms="12486">
+  <suite started-at="2021-06-23T04:34:17Z" name="Marchbatch" finished-at="2021-06-23T04:35:02Z" duration-ms="45450">
     <groups>
-      <group name="regression">
-        <method signature="Scenario_Login.testValidlogin(java.util.Map)[pri:0, instance:Scenario_Component.Scenario_Login@1e097d59]" name="testValidlogin" class="Scenario_Component.Scenario_Login"/>
-      </group> <!-- regression -->
       <group name="smoke">
-        <method signature="Scenario_Login.testInvalidlogin(java.util.Map)[pri:0, instance:Scenario_Component.Scenario_Login@1e097d59]" name="testInvalidlogin" class="Scenario_Component.Scenario_Login"/>
+        <method signature="Scenario_Login.testInvalidlogin(java.util.Map)[pri:0, instance:Scenario_Component.Scenario_Login@6fd83fc1]" name="testInvalidlogin" class="Scenario_Component.Scenario_Login"/>
+        <method signature="Scenario_Search.testInvalidSearch(java.util.Map)[pri:0, instance:Scenario_Component.Scenario_Search@1a18644]" name="testInvalidSearch" class="Scenario_Component.Scenario_Search"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2021-06-05T07:31:14Z" name="Default test" finished-at="2021-06-05T07:31:26Z" duration-ms="12486">
+    <test started-at="2021-06-23T04:34:17Z" name="RegSet1" finished-at="2021-06-23T04:35:02Z" duration-ms="45450">
       <class name="Scenario_Component.Scenario_Login">
-        <test-method is-config="true" signature="Report_extent()[pri:0, instance:Scenario_Component.Scenario_Login@1e097d59]" started-at="2021-06-05T13:01:14Z" name="Report_extent" finished-at="2021-06-05T13:01:14Z" duration-ms="328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Report_extent -->
-        <test-method is-config="true" signature="Launchapp()[pri:0, instance:Scenario_Component.Scenario_Login@1e097d59]" started-at="2021-06-05T13:01:15Z" name="Launchapp" finished-at="2021-06-05T13:01:21Z" duration-ms="5971" status="PASS">
+        <test-method is-config="true" signature="Launchapp()[pri:0, instance:Scenario_Component.Scenario_Login@6fd83fc1]" started-at="2021-06-23T10:04:18Z" name="Launchapp" finished-at="2021-06-23T10:04:52Z" duration-ms="34334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launchapp -->
-        <test-method signature="testInvalidlogin(java.util.Map)[pri:0, instance:Scenario_Component.Scenario_Login@1e097d59]" started-at="2021-06-05T13:01:21Z" name="testInvalidlogin" data-provider="dp_Invalidlogin" finished-at="2021-06-05T13:01:25Z" duration-ms="3743" status="PASS">
+        <test-method signature="testInvalidlogin(java.util.Map)[pri:0, instance:Scenario_Component.Scenario_Login@6fd83fc1]" started-at="2021-06-23T10:04:52Z" name="testInvalidlogin" data-provider="dp_Invalidlogin" finished-at="2021-06-23T10:04:52Z" duration-ms="414" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -29,14 +23,90 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.relevantcodes.extentreports.ExtentReports.startTest(String)" because "this.extentreport" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.relevantcodes.extentreports.ExtentReports.startTest(String)" because "this.extentreport" is null
+	at Scenario_Component.Scenario_Login.testInvalidlogin(Scenario_Login.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidlogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Scenario_Component.Scenario_Login@1e097d59]" started-at="2021-06-05T13:01:25Z" name="tearDown" finished-at="2021-06-05T13:01:26Z" duration-ms="1792" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Scenario_Component.Scenario_Login@6fd83fc1]" started-at="2021-06-23T10:04:53Z" name="tearDown" finished-at="2021-06-23T10:04:53Z" duration-ms="0" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.relevantcodes.extentreports.ExtentReports.endTest(com.relevantcodes.extentreports.ExtentTest)" because "this.extentreport" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.relevantcodes.extentreports.ExtentReports.endTest(com.relevantcodes.extentreports.ExtentTest)" because "this.extentreport" is null
+	at Generic_Component.Base_Class.tearDown(Base_Class.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Scenario_Component.Scenario_Login -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Scenario_Component.Scenario_Search">
+        <test-method is-config="true" signature="Report_extent()[pri:0, instance:Scenario_Component.Scenario_Search@1a18644]" started-at="2021-06-23T10:04:15Z" name="Report_extent" finished-at="2021-06-23T10:04:17Z" duration-ms="1228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report_extent -->
+      </class> <!-- Scenario_Component.Scenario_Search -->
+    </test> <!-- RegSet1 -->
+  </suite> <!-- Marchbatch -->
 </testng-results>
